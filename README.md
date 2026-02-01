@@ -181,7 +181,10 @@ Install:
 ```bash
 pip install customtkinter pywin32 matplotlib bcrypt pillow psutil
 ```
-
+Then Create User:
+```bash
+python create_admin.py
+```
 Then run:
 ```bash
 python run.py
