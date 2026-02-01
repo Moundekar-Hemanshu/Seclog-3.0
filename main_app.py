@@ -11,12 +11,21 @@ from modules.alert_manager import AlertManager
 from modules.correlation_engine import CorrelationEngine
 import ui_components
 
-class SecurityLogApp(ctk.CTk):
-    def __init__(self):
-        super().__init__()
+class SecurityLogApp(ctk.CTkToplevel):
+    def on_close(self):
+        try:
+            self.log_handler.stop_monitoring()
+            self.db_handler.close()
+        finally:
+            self.master.destroy()  # destroy ROOT, not Toplevel
+
+    def __init__(self, master):
+        super().__init__(master)
         self.title("SecLog - Windows Security Log Viewer")
         self.geometry("1200x700")
         self.minsize(1000, 600)
+        self.protocol("WM_DELETE_WINDOW", self.on_close)
+
 
         # Initialize backend handlers
         self.log_handler = LogHandler()

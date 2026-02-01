@@ -1,0 +1,31 @@
+# ===============================
+# Python / Build Artifacts
+# ===============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# ===============================
+# SecLog Sensitive / Runtime Data
+# ===============================
+Seclog/data/seclog.db
+Seclog/data/logs_archive/
+Seclog/data/*.db
+
+# ===============================
+# Credentials / Secrets
+# ===============================
+*.env
+.env
+.env.*
+users.json
+
+# ===============================
+# OS / Editor Junk
+# ===============================
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
