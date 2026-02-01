@@ -181,15 +181,6 @@ Install:
 ```bash
 pip install customtkinter pywin32 matplotlib bcrypt pillow psutil
 ```
-Then Create User:
-```bash
-python create_admin.py
-```
-Then run:
-```bash
-python run.py
-```
-
 After installing pywin32, also run:
 ```bash
 python -m pywin32_postinstall
@@ -205,20 +196,21 @@ cd Seclog-3.0
 ```bash
 pip install customtkinter pywin32 matplotlib bcrypt pillow psutil
 ```
-3. Run
+3. Then Create User:
+```bash
+python create_admin.py
+```
+4. Run
 ```bash
 python run.py
 ```
-
 Run terminal as Administrator for full log access.
 
-4. Login
+5. Login
 
 Users are stored in:
 
 `data/users.json`
-
-Create users via `UserAuthenticator.create_user()` or a helper script.
 
 ## Rules Configuration
 
