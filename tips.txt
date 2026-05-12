@@ -1,0 +1,13 @@
+AFTER THAT
+
+Next backend priorities become:
+
+better field extraction
+process telemetry (4688)
+search/filter APIs
+websocket streaming
+Sigma-style detections
+PostgreSQL migration
+timeline investigations
+
+THAT is the real SIEM path.

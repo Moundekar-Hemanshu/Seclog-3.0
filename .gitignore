@@ -8,19 +8,34 @@ __pycache__/
 *.log
 
 # ===============================
-# SecLog Sensitive / Runtime Data
+# Virtual Environment
 # ===============================
-Seclog/data/seclog.db
-Seclog/data/logs_archive/
-Seclog/data/*.db
+.venv/
+venv/
 
 # ===============================
-# Credentials / Secrets
+# SecLog Sensitive / Runtime Data
 # ===============================
-*.env
+
+# Ignore everything inside data folder
+data/*
+
+# But KEEP users.json (for login/demo)
+!data/users.json
+
+# ===============================
+# Database & Archives
+# ===============================
+*.db
+*.sqlite3
+data/logs_archive/
+
+# ===============================
+# Environment Variables / Secrets
+# ===============================
 .env
 .env.*
-users.json
+*.env
 
 # ===============================
 # OS / Editor Junk
@@ -29,3 +44,11 @@ Thumbs.db
 .DS_Store
 .vscode/
 .idea/
+
+# ===============================
+# Misc
+# ===============================
+*.bak
+*.tmp
+dashboard/node_modules/
+node_modules/

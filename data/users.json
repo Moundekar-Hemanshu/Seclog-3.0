@@ -1,0 +1,8 @@
+{
+    "admin": {
+        "password_hash": "$2b$12$hzz0r3abBl/Y2vKDDT6C4.LVvdR82urikBRzr1tA/PwV/1k9iI/Vy"
+    },
+    "test": {
+        "password_hash": "$2b$12$59E0huTVIJv4xrMptFywK.NEsbXMfWKaTtLgOKVEMa4eakLYLErSS"
+    }
+}

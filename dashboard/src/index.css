@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --card: #ffffff;
+    --ring: #f59e0b;
+    --input: #e5e7eb;
+    --muted: #f9fafb;
+    --accent: #fffbeb;
+    --border: #e5e7eb;
+    --radius: 0.375rem;
+    --chart-1: #f59e0b;
+    --chart-2: #d97706;
+    --chart-3: #b45309;
+    --chart-4: #92400e;
+    --chart-5: #78350f;
+    --popover: #ffffff;
+    --primary: #f59e0b;
+    --sidebar: #f9fafb;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Inter', sans-serif;
+    --secondary: #f3f4f6;
+    --background: #ffffff;
+    --foreground: #262626;
+    --destructive: #ef4444;
+    --card-foreground: #262626;
+    --sidebar-primary: #f59e0b;
+    --muted-foreground: #6b7280;
+    --accent-foreground: #92400e;
+    --popover-foreground: #262626;
+    --primary-foreground: #000000;
+    --sidebar-foreground: #262626;
+    --secondary-foreground: #4b5563;
+    --destructive-foreground: #ffffff;
+    --sidebar-accent: #fffbeb;
+    --sidebar-border: #e5e7eb;
+    --sidebar-ring: #f59e0b;
+    --sidebar-accent-foreground: #92400e;
+    --sidebar-primary-foreground: #ffffff;
+  }
+
+  .dark {
+    --card: #262626;
+    --ring: #f59e0b;
+    --input: #404040;
+    --muted: #262626;
+    --accent: #92400e;
+    --border: #404040;
+    --chart-1: #fbbf24;
+    --chart-2: #d97706;
+    --chart-3: #92400e;
+    --chart-4: #b45309;
+    --chart-5: #92400e;
+    --popover: #262626;
+    --primary: #f59e0b;
+    --sidebar: #0f0f0f;
+    --secondary: #262626;
+    --background: #171717;
+    --foreground: #e5e5e5;
+    --destructive: #ef4444;
+    --card-foreground: #e5e5e5;
+    --sidebar-primary: #f59e0b;
+    --muted-foreground: #a3a3a3;
+    --accent-foreground: #fde68a;
+    --popover-foreground: #e5e5e5;
+    --primary-foreground: #000000;
+    --sidebar-foreground: #e5e5e5;
+    --secondary-foreground: #e5e5e5;
+    --destructive-foreground: #ffffff;
+    --sidebar-accent: #92400e;
+    --sidebar-border: #404040;
+    --sidebar-ring: #f59e0b;
+    --sidebar-accent-foreground: #fde68a;
+    --sidebar-primary-foreground: #ffffff;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar for dark theme */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--muted-foreground);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--foreground);
+  }
+}
+
+/* Recharts overrides for dark theme */
+.recharts-cartesian-grid line {
+  stroke: var(--border) !important;
+  stroke-dasharray: 3 3;
+  opacity: 0.4;
+}
+
+.recharts-text {
+  fill: var(--muted-foreground) !important;
+  font-size: 11px;
+  font-family: var(--font-sans);
+}
+
+.recharts-tooltip-wrapper {
+  outline: none !important;
+}
