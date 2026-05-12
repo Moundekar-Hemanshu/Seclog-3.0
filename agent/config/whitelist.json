@@ -1,0 +1,39 @@
+{
+  "process_whitelist": [
+
+    "brave.exe",
+
+    "chrome.exe",
+
+    "msedge.exe",
+
+    "explorer.exe",
+
+    "code.exe",
+
+    "SearchIndexer.exe",
+
+    "OneDrive.exe",
+
+    "Discord.exe"
+
+  ],
+
+  "object_whitelist": [
+
+    "\\cache\\",
+
+    "\\temp\\",
+
+    "\\user data\\",
+
+    "\\indexeddb\\",
+
+    "\\cookies\\",
+
+    "\\history\\",
+
+    "\\webcache\\"
+
+  ]
+}
